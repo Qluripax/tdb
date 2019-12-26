@@ -1,0 +1,82 @@
+.vinghjul {
+    width: 50mm;
+}
+
+.calendar {
+    position: relative;
+}
+
+.cal, .legend, .prices {
+    position: absolute;
+    bottom: 0;
+}
+
+table.cal {
+    border: 1px solid;
+    width: 95%;
+    font-size: small;
+    _word-wrap: break-word;
+    table-layout: fixed;
+}
+
+.cal th {
+}
+
+.cal .weekday {
+    width: 6em;
+}
+
+.cal tr {
+    text-align: center;
+    vertical-align: middle;
+    width: 1em;
+}
+
+.cal td {
+    padding: 3px 0;
+}
+
+.steam {
+    background-color: #e1f0d4;
+}
+
+.railbus {
+    background-color: #fff9ab;
+}
+
+.special {
+    background-color: #ffdcb5;
+}
+
+.calMonths {
+    text-align: center;
+}
+
+.legend td.date {
+    text-align: center;
+    padding: 1px 4px;
+}
+
+.legend td.text {
+    padding-left: 8px;
+}
+
+@media print {
+    @page {
+        size: 330mm 427mm;
+        margin: 14mm;
+    }
+
+    .container {
+        width: 1235px;
+    }
+}
+
+.pre {
+    font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5667px;
+}
