@@ -61,6 +61,13 @@ table.cal {
     padding-left: 8px;
 }
 
+table.tdb {
+    margin-top: 2em;
+}
+.tbd td.right {
+    text-align: end;
+}
+
 @media print {
     @page {
         size: 330mm 427mm;
@@ -71,7 +78,9 @@ table.cal {
         width: 1235px;
     }
 }
-
+.rotate {
+    transform: rotate(-90deg);
+}
 .pre {
     font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
     font-size: 13px;
