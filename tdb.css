@@ -6,17 +6,19 @@
     position: relative;
 }
 
-.cal, .legend, .prices {
+.cal, .legend {
     position: absolute;
     bottom: 0;
 }
-
+.prices ul {
+    margin: unset;
+}
 table.cal {
     border: 1px solid;
     width: 95%;
     font-size: small;
     _word-wrap: break-word;
-    table-layout: fixed;
+    _table-layout: fixed;
 }
 
 .cal th {
@@ -33,7 +35,7 @@ table.cal {
 }
 
 .cal td {
-    padding: 3px 0;
+    padding: 1px 0;
 }
 
 .steam {
@@ -63,21 +65,22 @@ table.cal {
 
 table.tdb {
     margin-top: 2em;
+    border: 1px solid;
+    width: 95%;
+    font-size: small;
 }
-.tbd td.right {
-    text-align: end;
+tr.trainName {
+    height: 6em;
+}
+td.km {
+ _width:  2.8em;
+    text-align: right;
+    padding-right: 0.8em;
+}
+td.train {
+    max-width: 3.5em;
 }
 
-@media print {
-    @page {
-        size: 330mm 427mm;
-        margin: 14mm;
-    }
-
-    .container {
-        width: 1235px;
-    }
-}
 .rotate {
     transform: rotate(-90deg);
 }
@@ -88,4 +91,17 @@ table.tdb {
     font-variant: normal;
     font-weight: 400;
     line-height: 18.5667px;
+}
+.center {
+    text-align: center;
+}
+/*@media print {
+    @page {
+        size: 330mm 427mm;
+        margin: 14mm;
+    }
+
+    .container {
+        width: 1235px;
+    }
 }
