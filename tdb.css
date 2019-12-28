@@ -1,7 +1,7 @@
-.vinghjul {
+/*.vinghjul {
     width: 50mm;
 }
-
+*/
 .calendar {
     position: relative;
 }
@@ -95,13 +95,18 @@ td.train {
 .center {
     text-align: center;
 }
-/*@media print {
+#version {
+    margin-top: 2em;
+}
+@media print {
     @page {
-        size: 330mm 427mm;
-        margin: 14mm;
+        /* size: 350mm 427mm; */
+        margin-left: 20mm;
+        /* margin: 14mm; */
     }
 
     .container {
-        width: 1235px;
+        width: 1300px;
+       /* width: 1235px; */
     }
 }

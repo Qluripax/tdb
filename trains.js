@@ -1,3 +1,5 @@
+let version = 'Preliminär 2019-12-27';
+
 let trains = [
     {
         days: 'railbus',

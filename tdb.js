@@ -53,6 +53,7 @@ function initPage() {
     initTimeTable('tdb-2', 'steam');
     initTimeTable('tdb-3', 'railbus', true);
     initTimeTable('tdb-4', 'steam', true);
+    viewExplanation();
 }
 
 function initTimeTable(tdb, dayType, direction = false) {
@@ -113,6 +114,12 @@ function initTimeTable(tdb, dayType, direction = false) {
 
     }
     timeTable += '</tbody></table>';
+    if (tdb === 'tdb-3') {
+        timeTable += '<div class="pre">Km = avstånd på NBJ från Ervalla.</div>';
+    } else if (tdb === 'tdb-4'){
+        timeTable += '<div class="pre small right">Med reservation för ändring från t ex ånglok till diesellok ' +
+            'pga brandfara el dyl.</div>'
+    }
     $('#' + tdb).html(timeTable);
 }
 
@@ -151,6 +158,26 @@ function viewLegend() {
 
 }
 
+function viewExplanation() {
+    let exp = '<h3>Förklaringar</h3><table class="exp"><tbody><tr>' +
+        '<td class="center">x</td><td class="text">Stannar endast för av- eller påstigande passagerare.\n' +
+        'Lokföraren stannar tåget om det syns att du vill stiga på.\n' +
+        'Säg till konduktören i god tid om du vill stiga av på en hållplats.</td></tr>' +
+        '<tr><td class="center">|</td><td class="text">Inget uppehåll / Ingen anslutning</td></tr>' +
+        '<tr><td class="center"><img src="assets/steam.png" style="max-width:50px;max-height:18px;"></td>' +
+        '<td class="text">Tåget dras normalt av ånglok</td></tr>' +
+        '<tr><td class="center"><img src="assets/railbus.png" style="max-width:50px;max-height:18px;"></td>' +
+        '<td class="text">Tåget utgörs normalt av rälsbusståg</td></tr>' +
+
+        '</tbody></table><div class="small" id=""version"><i>Tdb, ' + version + '</i></div>';
+
+    $('#explanation').html(exp);
+
+    $('#logo').html('<img src="assets/nbvj-logo.png" class="img-fluid">');
+
+
+
+}
 function initCalendar() {
     let calendar = '<table class="cal"><thead><tbody><tr><th class="weekday"></th>';
 
