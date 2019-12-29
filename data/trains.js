@@ -4,7 +4,8 @@ let trains = [
     {
         days: 'railbus',
         type: 'railbus',
-        nr: 2, name: 'Kaffetåget',
+        nr: 2,
+        name: 'Kaffetåget',
         reversed: false,
         tdb: [{sign: 'fr N', time: '10:00'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
             {sign: 'Lm', time: 'x'}, {sign: 't J', time: '10:20'}, {sign: 'fr J', time: '10:25'},

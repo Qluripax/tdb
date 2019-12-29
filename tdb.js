@@ -1,54 +1,13 @@
-// set year to be handled
-let year = 2020;
-// Set first and last week to be printed within the calendar
-let weeksToShow = [23, 37];
-
-let trafficDays = [
-    {
-        type: 'steam', legend: 'Dag med Ångloks- och rälsbusstrafik',
-        caption: 'Lördagar 27 juni - 22 aug, onsdagar i Juli',
-        dates: ['2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-08', '2020-07-15', '2020-07-22',
-            '2020-07-29', '2020-06-27', '2020-07-11', '2020-07-18', '2020-07-25', '2020-08-01', '2020-08-01', '2020-08-08',
-            '2020-08-15', '2020-08-22']
-    },
-    {
-        type: 'railbus', legend: 'Dag med Rälsbusstrafik',
-        caption: 'Fredagar 10, 17, 24 & 31 juni',
-        dates: ['2020-07-10', '2020-07-17', '2020-07-24', '2020-07-31']
-    },
-    {
-        type: 'special', legend: "Dag med specialtidtabell, se&nbsp;www.nbvj.se",
-        caption: '',
-        dates: ['2020-06-13', '2020-06-19', '2020-08-29', '2020-08-30']
-    },
-];
-
-let trafficPlaces = [
-    {km: '17,6', sign: 'fr N', name: 'Fr Nora', class: 'font-weight-bold'},
-    {km: '14,0', sign: 'Kh', name: 'Källarhalsen', class: 'float-right'},
-    {km: '12,6', sign: 'Sm', name: 'Stora Mon', class: 'float-right'},
-    {km: '10,2', sign: 'lm', name: 'Lilla Mon', class: 'float-right'},
-    {km: '8,2', sign: 't J', name: 't Järle', class: 'font-weight-bold border-bottom'},
-    {km: '8,2', sign: 'fr J', name: 'fr Järle', class: 'font-weight-bold'},
-    {km: '6,4', sign: 'Tp', name: 'Torpa', class: 'float-right'},
-    {km: '2,8', sign: 't Lt', name: 't Löth', class: 'font-weight-bold border-bottom'},
-    {km: '19,5', sign: 'Phn', name: 'Pershyttevägen', class: 'float-right'},
-    {km: '20,9', sign: 'Ph', name: 'Pershyttan', class: 'float-right'},
-    {km: '22,9', sign: 't Phö', name: 't Pershyttan Övre', class: 'font-weight-bold'},
-    {km: '22,9', sign: 'fr Phö', name: 'fr Pershyttan Övre', class: 'font-weight-bold'},
-    {km: '22,6', sign: 'Gt', name: 't Gyttorp', class: 'font-weight-bold'},
-    {km: '23,5', sign: 'Kä', name: 'Käppsta (badtåg)', class: 'float-right'},
-    {km: '25,8', sign: 'Kp', name: 'Knapptorp', class: 'float-right'},
-    {km: '28,0', sign: 'Bt', name: 'Bengtstorp', class: 'float-right'},
-    {km: '30,7', sign: 'Vk', name: 'Vikersvik', class: 'float-right'},
-    {km: '32,6', sign: 'Nvk', name: 'Vikerskolorna', class: 'font-weight-bold'},
-];
 
 function initPage() {
     $('span.year').html(year);
+    if (watermark) {
+    $('p#wm-text').html(watermark);
+    }
     initCalendar();
     setTrafficDays();
     viewLegend();
+    viewPrices();
     initTimeTable('tdb-1', 'railbus');
     initTimeTable('tdb-2', 'steam');
     initTimeTable('tdb-3', 'railbus', true);
@@ -146,11 +105,20 @@ function setTrafficDays() {
     });
 }
 
+function viewPrices() {
+    let priceList = '<ul class="pre list-unstyled">';
+    $.each(prices, function (i, price) {
+        priceList += '<li>' + price + '</li>';
+    });
+    $('#priceList').html(priceList);
+
+}
+
 function viewLegend() {
     let legend = '<table class="legend "><tbody><tr><td class="pre date border">1</td><td class="pre text">Dag utan trafik</td></tr>';
     $.each(trafficDays, function (i, trafficDay) {
         legend += '<tr><td class="pre date ' + trafficDay.type + '">' + moment(trafficDay.dates[0]).format('D') +
-            '</td><td class="pre text">' + trafficDay.legend + '</td></tr>'
+            '</td><td class="pre text">' + trafficDay.legend + '</td></tr>';
     });
 
     legend += '</tbody></table>';
@@ -181,12 +149,13 @@ function viewExplanation() {
 function initCalendar() {
     let calendar = '<table class="cal"><thead><tbody><tr><th class="weekday"></th>';
 
-    let firstDate = moment().year(year).week(weeksToShow[0]).day('monday');
-    let lastDate = moment().year(year).week(weeksToShow[1]).day('sunday');
+    moment.locale('sv');
+    //let firstDate = moment().year(year).week(weeksToShow[0]).day('monday');
+    let firstDate = moment({y:year}).add(weeksToShow[0]-1, 'weeks').startOf('week');
+    let lastDate = moment({y:year}).add(weeksToShow[1]-1, 'weeks').endOf('week');
     let numberOfWeeks = (weeksToShow[1] - weeksToShow[0]);
     let allMonthsInPeriod = [];
     let colspansInPeriod = [];
-
     let startDate = moment(firstDate.format("YYYY-MM-01"));
     while (startDate.isBefore(lastDate)) {
         let colSpan;
@@ -221,7 +190,6 @@ function initCalendar() {
         allMonthsInPeriod: allMonthsInPeriod,
         colSpansInPeriod: colspansInPeriod,
     };
-
     $.each(allMonthsInPeriod, function (i, month) {
         let date = moment(month);
         let colSpan = _cal.colSpansInPeriod[i];

@@ -13,9 +13,9 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/paper-css/paper.css" rel="stylesheet">
+    <style>@page { size: A3 }</style>
     <link href="tdb.css" rel="stylesheet">
 
-    <style>@page { size: A3 }</style>
 
 </head>
 
@@ -24,6 +24,8 @@
 <!-- Page Content -->
 <div class="sheet padding-10mm container">
 
+    <!-- watermark -->
+    <div id="watermark"><p id="wm-text"></p></div>
     <!-- header -->
     <div class="row">
         <div class="col-3">
@@ -55,12 +57,7 @@
                     <li>Ombord på tåget (kontant, Swish)</li>
                 </ul>
                 <h4>Priser</h4>
-                <ul class="pre list-unstyled">
-                    <li>Nora - Järle (ToR), 150:-</li>
-                    <li>Nora - Pershytan/Gyttorp (ToR), 120:-</li>
-                    <li>Barn, 6-15 år, 25:-</li>
-                    <li>Övriga priser på www.nbvj.se</li>
-                </ul>
+                <div id="priceList"></div>
             </div>
         </div>
     </div>
@@ -99,7 +96,10 @@
 <script src="vendor/jquery/jquery.slim.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="vendor/moment-with-locales.min.js"></script>
-<script src="trains.js"></script>
+<script src="data/trains.js"></script>
+<script src="data/calendar.js"></script>
+<script src="data/trafficPlaces.js"></script>
+<script src="data/prices.js"></script>
 <script src="tdb.js"></script>
 
 </body>

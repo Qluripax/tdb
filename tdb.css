@@ -70,7 +70,7 @@ table.tdb {
     font-size: small;
 }
 tr.trainName {
-    height: 6em;
+    height: 6.5em;
 }
 td.km {
  _width:  2.8em;
@@ -90,13 +90,29 @@ td.train {
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    line-height: 18.5667px;
+    line-height: 18px;
 }
 .center {
     text-align: center;
 }
 #version {
     margin-top: 2em;
+}
+#watermark{
+    position:absolute;
+    z-index:0;
+    background:white;
+    display:block;
+    height:50%;
+    width:50%;
+    color:yellow;
+}
+#wm-text
+{
+    color:lightgrey;
+    font-size:120px;
+    transform:rotate(410deg);
+    -webkit-transform:rotate(410deg);
 }
 @media print {
     @page {
