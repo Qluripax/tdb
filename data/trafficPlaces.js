@@ -7,7 +7,7 @@ let trafficPlaces = [
     {km: '8,2', sign: 'fr J', name: 'fr Järle', class: 'font-weight-bold'},
     {km: '6,4', sign: 'Tp', name: 'Torpa', class: 'float-right'},
     {km: '2,8', sign: 't Lt', name: 't Löth', class: 'font-weight-bold border-bottom'},
-    {km: '19,5', sign: 'Phn', name: 'Pershyttevägen', class: 'float-right'},
+    {km: '19,5', sign: 'Pgn', name: 'Pershyttevägen', class: 'float-right'},
     {km: '20,9', sign: 'Ph', name: 'Pershyttan', class: 'float-right'},
     {km: '22,9', sign: 't Phö', name: 't Pershyttan Övre', class: 'font-weight-bold'},
     {km: '22,9', sign: 'fr Phö', name: 'fr Pershyttan Övre', class: 'font-weight-bold'},

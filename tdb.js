@@ -88,7 +88,9 @@ function _getTimeforPlace(trains, place, classes) {
         let trainInfo = '<td class="center ' + classes + '"></td>';
         $.each(train.tdb, function (ix, stop) {
             if (stop.sign === place) {
-                trainInfo = '<td class="small center ' + classes + '">' + stop.time + '</td>';
+                console.log(stop);
+                let bold =  (stop.sign.indexOf('fr') >= 0) ? 'font-weight-bold ': ' ';
+                trainInfo = '<td class="small center ' + bold + classes  + '">' + stop.time + '</td>';
             }
         });
         placeInfo += trainInfo;
