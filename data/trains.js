@@ -1,4 +1,4 @@
-let version = 'Preliminär 2019-12-27';
+let version = 'Preliminär 2019-12-29';
 
 let trains = [
     {
