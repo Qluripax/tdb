@@ -1,4 +1,4 @@
-let version = 'Preliminär 2019-12-29';
+let version = 'Preliminär 2019-12-30';
 
 let trains = [
     {
@@ -92,8 +92,8 @@ let trains = [
         type: 'railbus',
         name: 'Badtåget',
         reversed: false,
-        tdb: [{sign: 'fr N', time: '10:10'}, {sign: 'Gt', time: '10:21'}, {sign: 'Kä', time: '10:22'},
-            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '10:41'}, {sign: 'Nvk', time: '10:46'}]
+        tdb: [{sign: 'fr N', time: '10:10'}, {sign: 'Gt', time: '10:21'}, {sign: 'Kä', time: '10:23'},
+            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '10:39'}, {sign: 'Nvk', time: '10:43'}]
     }, {
         nr: 20,
         days: 'steam',
@@ -142,7 +142,7 @@ let trains = [
         name: 'Utflykts-\ntåget',
         reversed: false,
         tdb: [{sign: 'fr N', time: '14:00'}, {sign: 'Gt', time: '14:11'}, {sign: 'Kä', time: 'x'},
-            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '14:31'}, {sign: 'Nvk', time: '14:36'}]
+            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '14:29'}, {sign: 'Nvk', time: '14:33'}]
     }, {
         nr: 26,
         days: 'steam',
@@ -150,7 +150,7 @@ let trains = [
         name: 'Utflykts-\ntåget',
         reversed: true,
         tdb: [{sign: 'fr N', time: '15:46'}, {sign: 'fr Phö', time: '15:23'}, {sign: 't Phö', time: '15:30'},
-            {sign: 'Gt', time: '15:20'}, {sign: 'Kä', time: '15:19'}, {sign: 'Bt', time: 'x'},
+            {sign: 'Gt', time: '15:06'}, {sign: 'Kä', time: '15:05'}, {sign: 'Bt', time: 'x'},
             {sign: 'Vk', time: '14:50'}, {sign: 'Nvk', time: '14:45'}]
     }, {
         nr: 106,
