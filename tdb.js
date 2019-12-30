@@ -44,7 +44,7 @@ function initTimeTable(tdb, dayType, direction = false) {
         'Stationer/hållplatser</td>';
 
     $.each(_trains, function (i, train) {
-        timeTable += '<td class="center"><img src="assets/' + train.type + '.png" style="max-width:50px;max-height:18px;"></td>';
+        timeTable += '<td class="center"><img src="assets/' + train.type + '.png" class="icon" alt=""></td>';
     });
 
 //    timeTable += '</tr><tr><td class="small pre km border-bottom">Km</td><td class="small border-bottom">' +
@@ -134,16 +134,16 @@ function viewExplanation() {
         'Lokföraren stannar tåget om det syns att du vill stiga på.\n' +
         'Säg till konduktören i god tid om du vill stiga av på en hållplats.</td></tr>' +
         '<tr><td class="center">|</td><td class="text">Inget uppehåll / Ingen anslutning</td></tr>' +
-        '<tr><td class="center"><img src="assets/steam.png" style="max-width:50px;max-height:18px;"></td>' +
+        '<tr><td class="center"><img src="assets/steam.png" class="icon" alt=""></td>' +
         '<td class="text">Tåget dras normalt av ånglok</td></tr>' +
-        '<tr><td class="center"><img src="assets/railbus.png" style="max-width:50px;max-height:18px;"></td>' +
+        '<tr><td class="center"><img src="assets/railbus.png" class="icon" alt=""></td>' +
         '<td class="text">Tåget utgörs normalt av rälsbusståg</td></tr>' +
 
-        '</tbody></table><div class="small" id=""version"><i>Tdb, ' + version + '</i></div>';
+        '</tbody></table><div class="small" id="version"><i>Tdb, ' + version + '</i></div>';
 
     $('#explanation').html(exp);
 
-    $('#logo').html('<img src="assets/nbvj-logo.png" class="img-fluid">');
+    $('#logo').html('<img src="assets/nbvj-logo.png" class="img-fluid" alt="">');
 
 
 
@@ -168,7 +168,7 @@ function initCalendar() {
             colSpan = Math.floor((lastDay - firstDay) / 7);
         } else if (startDate.format("YYYY-MM") >= lastDate.format("YYYY-MM")) {
             // set last month
-            let firstDay = moment(startDate).format("D");
+            //let firstDay = moment(startDate).format("D");
             let lastDay = moment(lastDate).format('D');
             colSpan = Math.floor((lastDate.day() + lastDay) / 7);
             colSpan = (colSpan >= numberOfWeeks) ? numberOfWeeks : colSpan;

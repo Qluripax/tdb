@@ -98,6 +98,10 @@ td.train {
 #version {
     margin-top: 2em;
 }
+.icon {
+    max-width:50px;
+    max-height:18px;
+}
 #watermark{
     position:absolute;
     z-index:0;
