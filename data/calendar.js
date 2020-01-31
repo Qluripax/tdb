@@ -16,7 +16,7 @@ let trafficDays = [
     },
     {
         type: 'railbus', legend: 'Dag med Rälsbusstrafik',
-        caption: 'Fredagar 10, 17, 24 & 31 juni',
+        caption: 'Fredagar 10, 17, 24 & 31 juli',
         dates: ['2020-07-10', '2020-07-17', '2020-07-24', '2020-07-31']
     },
     {
