@@ -1,4 +1,4 @@
-let version = '2020-03-03';
+let version = '2020-05-15';
 
 let trains = [
     {
@@ -8,8 +8,7 @@ let trains = [
         name: 'Kaffetåget',
         reversed: false,
         tdb: [{sign: 'fr N', time: '10:00'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
-            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '10:20'}, {sign: 'fr J', time: '10:25'},
-            {sign: 'Tp', time: '10:29'}, {sign: 't Lt', time: '10:38'}]
+            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '10:20'}]
     }, {
         nr: 13,
         days: 'railbus',
@@ -17,8 +16,7 @@ let trains = [
         name: 'Kaffetåget',
         reversed: true,
         tdb: [{sign: 'fr N', time: '11:30'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
-            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '11:10'}, {sign: 'fr J', time: '11:00'},
-            {sign: 'Tp', time: '10:56'}, {sign: 't Lt', time: '10:47'}]
+            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '11:10'}]
     }, {
         nr: 21,
         days: 'railbus',
@@ -42,8 +40,7 @@ let trains = [
         name: 'Fikatåget',
         reversed: false,
         tdb: [{sign: 'fr N', time: '13:20'}, {sign: 'Sm', time: 'x'}, {sign: 'Lm', time: '|'},
-            {sign: 't J', time: '13:40'}, {sign: 'fr J', time: '13:45'}, {sign: 'Tp', time: '13:49'},
-            {sign: 't Lt', time: '13:58'}]
+            {sign: 't J', time: '13:40'}]
     }, {
         nr: 15,
         days: 'railbus',
@@ -51,8 +48,7 @@ let trains = [
         name: 'Fikatåget',
         reversed: true,
         tdb: [{sign: 'fr N', time: '14:45'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
-            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '14:25'}, {sign: 'fr J', time: '14:20'},
-            {sign: 'Tp', time: '14:16'}, {sign: 't Lt', time: '14:07'}]
+            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '14:25'}]
     }, {
         nr: 27,
         days: 'railbus',
@@ -93,7 +89,7 @@ let trains = [
         name: 'Badtåget',
         reversed: false,
         tdb: [{sign: 'fr N', time: '10:10'}, {sign: 'Gt', time: '10:21'}, {sign: 'Kä', time: '10:23'},
-            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '10:39'}, {sign: 'Nvk', time: '10:43'}]
+            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '10:39'}]
     }, {
         nr: 20,
         days: 'steam',
@@ -101,7 +97,7 @@ let trains = [
         name: 'Badtåget',
         reversed: true,
         tdb: [{sign: 'fr N', time: '11:33'}, {sign: 'Pgn', time: 'x'}, {sign: 'Gt', time: '11:21'},
-            {sign: 'Kä', time: '11:20'}, {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: 'x'}, {sign: 'Nvk', time: '11:00'}]
+            {sign: 'Kä', time: '11:20'}, {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '11:00'}]
     }, {
         nr: 23,
         days: 'steam',
@@ -142,7 +138,7 @@ let trains = [
         name: 'Utflykts-\ntåget',
         reversed: false,
         tdb: [{sign: 'fr N', time: '14:00'}, {sign: 'Gt', time: '14:11'}, {sign: 'Kä', time: 'x'},
-            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '14:29'}, {sign: 'Nvk', time: '14:33'}]
+            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '14:29'}]
     }, {
         nr: 26,
         days: 'steam',
@@ -151,7 +147,7 @@ let trains = [
         reversed: true,
         tdb: [{sign: 'fr N', time: '15:46'}, {sign: 'fr Phö', time: '15:23'}, {sign: 't Phö', time: '15:30'},
             {sign: 'Gt', time: '15:06'}, {sign: 'Kä', time: '15:05'}, {sign: 'Bt', time: 'x'},
-            {sign: 'Vk', time: '14:50'}, {sign: 'Nvk', time: '14:45'}]
+            {sign: 'Vk', time: '14:50'}]
     }, {
         nr: 106,
         days: 'steam',

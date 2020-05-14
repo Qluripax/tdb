@@ -22,6 +22,6 @@ let trafficDays = [
     {
         type: 'special', legend: "Dag med specialtidtabell, se&nbsp;www.nbvj.se",
         caption: '',
-        dates: ['2020-06-13', '2020-06-19', '2020-08-29', '2020-08-30']
+        dates: ['2020-08-29', '2020-08-30']
     },
 ];

@@ -130,14 +130,14 @@ function viewLegend() {
 
 function viewExplanation() {
     let exp = '<h3>Förklaringar</h3><table class="exp"><tbody><tr>' +
-        '<td class="center">x</td><td class="text">Stannar endast för av- eller påstigande passagerare.\n' +
+        '<td class="center">x</td><td class="pre text">Stannar endast för av- eller påstigande passagerare.\n' +
         'Lokföraren stannar tåget om det syns att du vill stiga på.\n' +
         'Säg till konduktören i god tid om du vill stiga av på en hållplats.</td></tr>' +
-        '<tr><td class="center">|</td><td class="text">Inget uppehåll / Ingen anslutning</td></tr>' +
+        '<tr><td class="center">|</td><td class="pre text">Inget uppehåll / Ingen anslutning</td></tr>' +
         '<tr><td class="center"><img src="assets/steam.png" class="icon" alt=""></td>' +
-        '<td class="text">Tåget dras normalt av ånglok</td></tr>' +
+        '<td class="pre text">Tåget dras normalt av ånglok</td></tr>' +
         '<tr><td class="center"><img src="assets/railbus.png" class="icon" alt=""></td>' +
-        '<td class="text">Tåget utgörs normalt av rälsbusståg</td></tr>' +
+        '<td class="pre text">Tåget utgörs normalt av rälsbusståg</td></tr>' +
 
         '</tbody></table><div class="small" id="version"><i>Tdb, ' + version + '</i></div>';
 
