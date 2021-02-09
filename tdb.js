@@ -8,14 +8,14 @@ function initPage() {
     setTrafficDays();
     viewLegend();
     viewPrices();
-    initTimeTable('tdb-1', 'railbus');
-    initTimeTable('tdb-2', 'steam');
-    initTimeTable('tdb-3', 'railbus', true);
-    initTimeTable('tdb-4', 'steam', true);
+    initTimeTable('tdb-1', line_1, 'railbus');
+    initTimeTable('tdb-2', line_2, 'steam');
+    initTimeTable('tdb-3',line_1,  'railbus', true);
+    initTimeTable('tdb-4',line_2,  'steam', true);
     viewExplanation();
 }
 
-function initTimeTable(tdb, dayType, direction = false) {
+function initTimeTable(tdb, trafficPlaces, dayType, direction = false) {
 
     let caption = '';
     let _trains = [];
@@ -119,8 +119,10 @@ function viewPrices() {
 function viewLegend() {
     let legend = '<table class="legend "><tbody><tr><td class="pre date border">1</td><td class="pre text">Dag utan trafik</td></tr>';
     $.each(trafficDays, function (i, trafficDay) {
-        legend += '<tr><td class="pre date ' + trafficDay.type + '">' + moment(trafficDay.dates[0]).format('D') +
-            '</td><td class="pre text">' + trafficDay.legend + '</td></tr>';
+        if (trafficDay.dates.length >0 ) {
+            legend += '<tr><td class="pre date ' + trafficDay.type + '">' + moment(trafficDay.dates[0]).format('D') +
+                '</td><td class="pre text">' + trafficDay.legend + '</td></tr>';
+        }
     });
 
     legend += '</tbody></table>';

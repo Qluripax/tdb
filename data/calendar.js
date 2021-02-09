@@ -1,5 +1,5 @@
 // set year to be handled
-let year = 2020;
+let year = 2021;
 // Set first and last week to be printed within the calendar
 let weeksToShow = [23, 37];
 
@@ -9,19 +9,19 @@ let watermark = "";
 let trafficDays = [
     {
         type: 'steam', legend: 'Dag med Ångloks- och rälsbusstrafik',
-        caption: 'Noradagarna 1-4  juli samt lördagar 27 juni - 22 aug',
-        dates: ['2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04',
-            '2020-07-11', '2020-07-18', '2020-07-25', '2020-08-01', '2020-08-01', '2020-08-08',
-            '2020-08-15', '2020-08-22']
+        caption: 'Ångtåg Nora - Järle',
+        dates: ['2021-07-03', '2021-07-07', '2021-07-08', '2021-07-09', '2021-07-10', '2021-07-16', '2021-07-17',
+            '2021-07-23', '2021-07-24', '2021-07-30', '2021-07-31', '2021-08-07',
+            '2021-08-14', '2021-08-21']
     },
     {
         type: 'railbus', legend: 'Dag med Rälsbusstrafik',
-        caption: 'Onsdagar och fredagar i Juli',
-        dates: ['2020-07-08', '2020-07-10', '2020-07-15', '2020-07-17', '2020-07-22', '2020-07-24', '2020-07-29', '2020-07-31']
+        caption: 'Rälsbuss Nora - Pershyttan, Gyttorp och Vikersvik',
+        dates: []
     },
     {
-        type: 'special', legend: "Dag med specialtidtabell, se&nbsp;www.nbvj.se",
+        type: 'special', legend: "Dag med specialtidtabell, se&nbsp;www.ångtågetutinora.se",
         caption: '',
-        dates: ['2020-08-29', '2020-08-30']
+        dates: ['2021-08-28', '2021-08-29']
     },
 ];
