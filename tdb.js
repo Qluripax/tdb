@@ -8,10 +8,10 @@ function initPage() {
     setTrafficDays();
     viewLegend();
     viewPrices();
-    initTimeTable('tdb-1', line_1, 'railbus');
-    initTimeTable('tdb-2', line_2, 'steam');
-    initTimeTable('tdb-3',line_1,  'railbus', true);
-    initTimeTable('tdb-4',line_2,  'steam', true);
+    initTimeTable('tdb-2', line_1, 'railbus');
+    initTimeTable('tdb-1', line_2, 'steam');
+    initTimeTable('tdb-4',line_1,  'railbus', true);
+    initTimeTable('tdb-3',line_2,  'steam', true);
     viewExplanation();
 }
 

@@ -30,7 +30,12 @@ let line_1 = [
     {km: '25,8', sign: 'Kp', name: 'Knapptorp', class: 'float-right'},
     {km: '28,0', sign: 'Bt', name: 'Bengtstorp', class: 'float-right'},
     {km: '30,7', sign: 'Vk', name: 'Vikersvik', class: 'float-right'},
-    {km: '32,6', sign: 'Nvk', name: 'Vikerskolorna', class: 'font-weight-bold'},
+    {km: '32,6', sign: 'Nvk', name: 'Nya Viker', class: 'font-weight-bold'},
+    {km: '33,0', sign: 'Ep', name: 'Erntorp', class: 'float-right'},
+    {km: '35,5', sign: 'P', name: 'Paris', class: 'float-right'},
+    {km: '38,3', sign: 'Bn', name: 'Botten', class: 'float-right'},
+    {km: '39,7', sign: 'Lh', name: 'Lanthöjden', class: 'float-right'},
+    {km: '44,4', sign: 'Kf', name: 'Kortfors', class: 'float-right'},
 ];
 
 let line_2 = [
