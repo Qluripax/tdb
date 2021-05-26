@@ -4,6 +4,11 @@
 */
 .calendar {
     position: relative;
+    top: 20px;
+}
+.timetable {
+    position: relative;
+    top: 20px;
 }
 
 .cal, .legend {
@@ -70,7 +75,7 @@ table.tdb {
     font-size: small;
 }
 tr.trainName {
-    height: 6.5em;
+    height: 7.7em;
 }
 td.km {
  _width:  2.8em;
@@ -111,6 +116,20 @@ td.train {
     width:50%;
     color:yellow;
 }
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+#logo1, #logo2 {
+    display: inline-block;
+}
+#logo1 img {}
+#logo2 {
+    position: relative;
+    top: -23px;
+}
+#logo2 img {}
 #wm-text
 {
     color:lightgrey;
