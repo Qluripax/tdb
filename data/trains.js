@@ -1,4 +1,4 @@
-let version = '2021-05-25';
+let version = '2021-06-03';
 
 let trains = [
     {
@@ -120,15 +120,15 @@ let trains = [
         type: 'steam',
         name: 'Eftermiddags\nångan',
         reversed: false,
-        tdb: [{sign: 'fr N', time: '14:30'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
-            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '14:50'}]
+        tdb: [{sign: 'fr N', time: '15:00'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
+            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '15:20'}]
     }, {
         nr: 107,
         days: 'steam',
         type: 'steam',
         name: 'Eftermiddags\nångan',
         reversed: true,
-        tdb: [{sign: 'fr N', time: '16:00'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
-            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '15:40'}]
+        tdb: [{sign: 'fr N', time: '16:20'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
+            {sign: 'Lm', time: 'x'}, {sign: 't J', time: '16:00'}]
     },
 ];
