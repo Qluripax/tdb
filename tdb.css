@@ -129,7 +129,10 @@ td.train {
     position: relative;
     top: -23px;
 }
-#logo2 img {}
+#logo2 img {
+    position: relative;
+    top: 25px;
+}
 #wm-text
 {
     color:lightgrey;
