@@ -139,7 +139,7 @@ function viewExplanation() {
         '<tr><td class="center"><img src="assets/steam.png" class="icon" alt=""></td>' +
         '<td class="pre text">Tåget dras normalt av ånglok</td></tr>' +
         '<tr><td class="center"><img src="assets/railbus.png" class="icon" alt=""></td>' +
-        '<td class="pre text">Tåget utgörs normalt av rälsbusståg</td></tr>' +
+        '<td class="pre text">Rälsbuss</td></tr>' +
 
         '</tbody></table><div class="small" id="version"><i>Tdt, ' + version + '</i></div>';
 
