@@ -141,7 +141,7 @@ function viewExplanation() {
         '<tr><td class="center"><img src="assets/railbus.png" class="icon" alt=""></td>' +
         '<td class="pre text">Tåget utgörs normalt av rälsbusståg</td></tr>' +
 
-        '</tbody></table><div class="small" id="version"><i>Tdb, ' + version + '</i></div>';
+        '</tbody></table><div class="small" id="version"><i>Tdt, ' + version + '</i></div>';
 
     $('#explanation').html(exp);
 
