@@ -146,7 +146,8 @@ function viewExplanation() {
     $('#explanation').html(exp);
 
     $('#logo1').html('<img src="assets/Angtaget-Uti-Nora.jpg" class="img-fluid" alt="">');
-    $('#logo2').html('<img src="assets/nbvj-logo.png" class="img-fluid" alt="">');
+    //$('#logo2').html('<img src="assets/Angtaget-Uti-Nora.jpg" class="img-fluid" alt="">');
+    //$('#logo2').html('<img src="assets/nbvj-logo.png" class="img-fluid" alt="">');
 
 
 
