@@ -1,5 +1,5 @@
 // set year to be handled
-let year = 2021;
+let year = 2022;
 // Set first and last week to be printed within the calendar
 let weeksToShow = [23, 37];
 
@@ -10,9 +10,9 @@ let trafficDays = [
     {
         type: 'steam', legend: 'Dag med Ångloks- och rälsbusstrafik',
         caption: 'Ångtåg Nora - Järle',
-        dates: ['2021-07-07', '2021-07-08', '2021-07-09', '2021-07-10', '2021-07-16', '2021-07-17',
-            '2021-07-23', '2021-07-24', '2021-07-30', '2021-07-31', '2021-08-07',
-            '2021-08-14', '2021-08-21']
+        dates: ['2022-07-02', '2022-07-06', '2022-07-07', '2022-07-08', '2022-07-09', '2022-07-15', '2022-07-16',
+            '2022-07-22', '2022-07-23', '2022-07-29', '2022-07-30', '2022-08-06',
+            '2022-08-13', '2022-08-20']
     },
     {
         type: 'railbus', legend: 'Dag med Rälsbusstrafik',
@@ -22,6 +22,6 @@ let trafficDays = [
     {
         type: 'special', legend: "Dag med specialtidtabell, se&nbsp;www.ångtågetutinora.se",
         caption: '',
-        dates: ['2021-07-03', '2021-08-28', '2021-08-29']
+        dates: ['2022-06-24', '2022-08-27', '2022-08-28']
     },
 ];
