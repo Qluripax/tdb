@@ -1,4 +1,4 @@
-let version = 'Prel 2022-03-22';
+let version = 'Prel 2023-01-12';
 
 let trains = [
     {
@@ -124,7 +124,7 @@ let trains = [
         type: 'steam',
         name: 'Extratåg, går ej alla dagar',
         reversed: true,
-        tdb: [{sign: 'fr N', time: '14:00'}, {sign: 'Kh', time: 'x'}, {sign: 'Sm', time: 'x'},
+        tdb: [{sign: 'fr N', time: '14:00'}, {sign: 'Kh', time: 'X'}, {sign: 'Sm', time: 'x'},
             {sign: 'Lm', time: 'x'}, {sign: 't J', time: '13:40'}]
     }, {
         nr: 106,
