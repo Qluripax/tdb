@@ -3,7 +3,7 @@
 // set year to be handled
 let year = 2023;
 // Set first and last week to be printed within the calendar
-let weeksToShow = [23, 37];
+let weeksToShow = [20, 36];
 
 // Set to empty to disable watermark
 let watermark = "";
