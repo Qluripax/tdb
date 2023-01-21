@@ -1,9 +1,10 @@
 
 function initPage() {
-    $('span.year').html(year);
+    $('span.year').html(steamshop.currentYear);
     if (watermark) {
     $('p#wm-text').html(watermark);
     }
+
     initCalendar();
     setTrafficDays();
     viewLegend();
@@ -13,13 +14,14 @@ function initPage() {
     initTimeTable('tdb-4',line_1,  'railbus', true);
     initTimeTable('tdb-3',line_2,  'steam', true);
     viewExplanation();
+  //  });
 }
 
 function initTimeTable(tdb, trafficPlaces, dayType, direction = false) {
 
     let caption = '';
     let _trains = [];
-    $.each(trafficDays, function (i, day) {
+    $.each(steamshop.trafficDays, function (i, day) {
         if (day.type === dayType) {
             caption = day.caption;
         }
@@ -99,7 +101,7 @@ function _getTimeforPlace(trains, place, classes) {
 }
 
 function setTrafficDays() {
-    $.each(trafficDays, function (i, trafficDay) {
+    $.each(steamshop.trafficDays, function (i, trafficDay) {
         $.each(trafficDay.dates, function (ix, date) {
             let tDate = moment(date).dayOfYear();
             $('td#' + tDate).addClass(trafficDay.type);
@@ -109,7 +111,7 @@ function setTrafficDays() {
 
 function viewPrices() {
     let priceList = '<ul class="pre list-unstyled">';
-    $.each(prices, function (i, price) {
+    $.each(steamshop.prices, function (i, price) {
         priceList += '<li>' + price + '</li>';
     });
     $('#priceList').html(priceList);
@@ -118,7 +120,7 @@ function viewPrices() {
 
 function viewLegend() {
     let legend = '<table class="legend "><tbody><tr><td class="pre date border">1</td><td class="pre text">Dag utan trafik</td></tr>';
-    $.each(trafficDays, function (i, trafficDay) {
+    $.each(steamshop.trafficDays, function (i, trafficDay) {
         if (trafficDay.dates.length >0 ) {
             legend += '<tr><td class="pre date ' + trafficDay.type + '">' + moment(trafficDay.dates[0]).format('D') +
                 '</td><td class="pre text">' + trafficDay.legend + '</td></tr>';
@@ -157,8 +159,8 @@ function initCalendar() {
 
     moment.locale('sv');
     //let firstDate = moment().year(year).week(weeksToShow[0]).day('monday');
-    let firstDate = moment({y:year}).add(weeksToShow[0]-1, 'weeks').startOf('week');
-    let lastDate = moment({y:year}).add(weeksToShow[1]-1, 'weeks').endOf('week');
+    let firstDate = moment({y:steamshop.currentYear}).add(weeksToShow[0]-1, 'weeks').startOf('week');
+    let lastDate = moment({y:steamshop.currentYear}).add(weeksToShow[1]-1, 'weeks').endOf('week');
     let numberOfWeeks = (weeksToShow[1] - weeksToShow[0]);
     let allMonthsInPeriod = [];
     let colspansInPeriod = [];
@@ -213,7 +215,7 @@ function initCalendar() {
 
         for (let colspanNumber = 0, l = _cal.numberOfWeeks; colspanNumber < l; colspanNumber++) {
             let day = dayNumber + i + (colspanNumber * 7);
-            let printDate = moment().year(year).dayOfYear(day);
+            let printDate = moment().year(steamshop.currentYear).dayOfYear(day);
             let printDay = moment(printDate).locale('sv').format('D');
             calendar += '<td id="' + day + '">' + printDay + '</td>';
         }
@@ -225,5 +227,6 @@ function initCalendar() {
 
 
 $(document).ready(function () {
+    console.log(steamshop);
     initPage();
 });

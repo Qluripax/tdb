@@ -1,13 +1,14 @@
 // This file is also used by ångtågetutinora.se
 
 // set year to be handled
-let year = 2023;
+//let year = 2023;
 // Set first and last week to be printed within the calendar
 let weeksToShow = [20, 36];
 
 // Set to empty to disable watermark
 let watermark = "";
 
+/*
 let trafficDays = [
     {
         type: 'steam', legend: 'Dag med Ångloks- och rälsbusstrafik',
@@ -27,3 +28,4 @@ let trafficDays = [
         dates: ['2023-06-23', '2023-07-07', '2023-08-26', '2023-08-27']
     },
 ];
+ */
