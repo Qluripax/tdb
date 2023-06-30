@@ -1,66 +1,90 @@
-let version = 'Prel 2023-01-21';
+let version = '2023-06-30';
 
 let trains = [
     {
-        nr: 21,
+        nr: 49,
         days: 'railbus',
         type: 'railbus',
-        name: 'Badtåget',
+        name: '',
         reversed: false,
-        tdb: [{sign: 'fr N', time: '09:55'}, {sign: 'Gt', time: '10:07'}, {sign: 'Kä', time: 'x'},
-            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '10:27'}, {sign: 'Nvk', time: '10:32'}]
+        tdb: [{sign: 'fr N', time: '09:55'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '10:10'}]
     }, {
-        nr: 22,
+        nr: 50,
         days: 'railbus',
         type: 'railbus',
-        name: 'Badtåget',
+        name: '',
         reversed: true,
-        tdb: [{sign: 'fr N', time: '11:40'}, {sign: 't Phö', time: '11:25'}, {sign: 'fr Phö', time: '11:15'}, {sign: 'Gt', time: '11:02'},
-            {sign: 'Kä', time: 'x'}, {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '10:45'}, {sign: 'Nvk', time: '10:40'}]
+        tdb: [{sign: 'fr N', time: '10:44'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '10:30'}]
     },    {
-        nr: 23,
+        nr: 51,
         days: 'railbus',
         type: 'railbus',
-        name: 'Gruvtåget',
+        name: '',
         reversed: false,
-        tdb: [{sign: 'fr N', time: '11:50'}, {sign: 't Phö', time: '12:05'}]
+        tdb: [{sign: 'fr N', time: '11:00'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '11:15'}]
     }, {
-        nr: 24,
+        nr: 52,
         days: 'railbus',
         type: 'railbus',
-        name: 'Gruvtåget',
+        name: '',
         reversed: true,
-        tdb: [{sign: 'fr N', time: '12:30'}, {sign: 't Phö', time: '12:15'}]
+        tdb: [{sign: 'fr N', time: '11:40'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '11:25'}]
     },    {
-        nr: 25,
+        nr: 53,
         days: 'railbus',
         type: 'railbus',
-        name: 'Återtåget',
+        name: '',
         reversed: false,
-        tdb: [{sign: 'fr N', time: '13:55'}, {sign: 't Phö', time: '14:10'}]
+        tdb: [{sign: 'fr N', time: '11:50'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '12:06'}]
     }, {
-        nr: 26,
+        nr: 54,
         days: 'railbus',
         type: 'railbus',
-        name: 'Återtåget',
+        name: '',
         reversed: true,
-        tdb: [{sign: 'fr N', time: '14:30'}, {sign: 't Phö', time: '14:15'}]
-    },   {
-        nr: 27,
+        tdb: [{sign: 'fr N', time: '12:35'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '12:20'}]
+    },    {
+        nr: 55,
         days: 'railbus',
         type: 'railbus',
-        name: 'Utflyktståget',
+        name: '',
         reversed: false,
-        tdb: [{sign: 'fr N', time: '14:55'}, {sign: 'Gt', time: '15:07'}, {sign: 'Kä', time: 'x'},
-            {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '15:27'}, {sign: 'Nvk', time: '15:32'}]
+        tdb: [{sign: 'fr N', time: '13:55'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '14:10'}]
     }, {
-        nr: 28,
+        nr: 56,
         days: 'railbus',
         type: 'railbus',
-        name: 'Utflyktståget',
+        name: '',
         reversed: true,
-        tdb: [{sign: 'fr N', time: '16:36'}, {sign: 'Pgn', time: '|'}, {sign: 't Phö', time: '16:20'}, {sign: 'fr Phö', time: '16:15'}, {sign: 'Gt', time: '16:02'},
-            {sign: 'Kä', time: 'x'}, {sign: 'Bt', time: 'x'}, {sign: 'Vk', time: '15:45'}, {sign: 'Nvk', time: '15:40'}]
+        tdb: [{sign: 'fr N', time: '14:30'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '14:15'}]
+    },    {
+        nr: 57,
+        days: 'railbus',
+        type: 'railbus',
+        name: '',
+        reversed: false,
+        tdb: [{sign: 'fr N', time: '14:55'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '15:10'}]
+    }, {
+        nr: 58,
+        days: 'railbus',
+        type: 'railbus',
+        name: '',
+        reversed: true,
+        tdb: [{sign: 'fr N', time: '15:45'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '15:30'}]
+    },    {
+        nr: 59,
+        days: 'railbus',
+        type: 'railbus',
+        name: '',
+        reversed: false,
+        tdb: [{sign: 'fr N', time: '16:00'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '16:15'}]
+    }, {
+        nr: 60,
+        days: 'railbus',
+        type: 'railbus',
+        name: '',
+        reversed: true,
+        tdb: [{sign: 'fr N', time: '16:40'}, {sign: 'Pgn', time: 'x'}, {sign: 't Phö', time: '16:25'}]
     },
     { // Ångtåg på Järle
         nr: 102,
