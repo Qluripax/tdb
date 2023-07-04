@@ -1,4 +1,4 @@
-let version = '2023-06-30';
+let version = '2023-07-01';
 
 let trains = [
     {
